@@ -105,16 +105,29 @@
                         <!-- data-bs-interval="2000" é o intevalo para o slide da imagem selecionada em ms -->
                         <div data-bs-interval="2000" class="carousel-item active">
                             <img src="https://cdn.pixabay.com/photo/2022/08/21/05/48/insect-7400456_1280.jpg" alt="">
-                            
+
+                            <!-- caption(descricao) da imagem -->
+                            <div class="carousel-caption">
+                                <h2>Foto</h2>
+                            </div>
                         </div>
                         <div data-bs-interval="2000" class="carousel-item">
                             <img src="https://cdn.pixabay.com/photo/2023/05/24/05/06/dog-8014047_1280.jpg" alt="">
+                            <div class="carousel-caption">
+                                <h2>Foto</h2>
+                            </div>
                         </div>
                         <div data-bs-interval="2000" class="carousel-item">
                             <img src="https://cdn.pixabay.com/photo/2023/05/06/22/11/dragonfly-7975259_1280.jpg" alt="">
+                            <div class="carousel-caption">
+                                <h2>Foto</h2>
+                            </div>
                         </div>
                         <div data-bs-interval="2000" class="carousel-item">
                             <img src="https://cdn.pixabay.com/photo/2023/05/22/11/22/superb-fairywren-8010454_1280.jpg" alt="">
+                            <div class="carousel-caption">
+                                <h2>Foto</h2>
+                            </div>
                         </div>
                     </div>
 
@@ -150,6 +163,138 @@
             </div>
         </div>
     </div>
+
+    <!-- Dropdown -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="display-3">DropDown</h2>
+
+                <!-- Inicio do dropdown -->
+                <div class="dropdown">
+
+                    <!-- botao: quando clicado surgem novos itens -->
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"> Cadastrar</button>
+
+                    <!-- menu eexibido quando o botao é clicado -->
+                    <ul class="dropdown-menu">
+
+                        <!-- itens do menu -->
+                        <li class="dropdown-item">
+                            <a href="#">Novo usuario</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#">Novo fornecedor</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#">Novo colaborador</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Muda dois botoes para um só -->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-dark">Cadastrar</button>
+
+                    <!-- "dropdown-toggle" é alterar dropdown, ou seja, muda o estado do elemento que nao esta visivel para visivel e vice-versa -->
+                    <!-- "dropdown-toggle-split" divide e encaixa os dois botoes -->
+                    <!-- data-bs-toggle, tipo de mudanca no conteudo -->
+                    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"></button>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                            <a href="#">item 1</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#">item 2</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#">item 3</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal - PopUp -->
+    <div class="container">
+        <div class="row">
+            <!-- Modal normal -->
+            <div class="col-12">
+                <h2 class="display-3">Modal - PopUp</h2>
+
+                <!-- Chamando o modal - PopUp -->
+                <button type="button" class="btn btn-warning" data-bs-target="#modal1" data-bs-toggle="modal">Exibir avisos</button>
+
+                <!-- comeco do modal - PopUp -->
+                <div id="modal1" class="modal">
+
+                    <!-- Comecando um dialogo -->
+                    <div class="modal-dialog">
+
+                        <!-- Conteudo do modal - PopUp -->
+                        <div class="modal-content">
+
+                            <!-- cabeca, corpo e pes do PopUp -->
+                            <div class="modal-header">
+                                <h4>Titulo da modal</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo alias reprehenderit quibusdam consectetur ipsum similique laborum asperiores quidem, libero aliquam dolore vitae temporibus eius aliquid ex provident ad unde? A.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <h5>Rodape da modal</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal static. quando clica do lado de fora dela, nao some. -->
+            <div class="col-12">
+                <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#modal2">Modal - PopUp Static</button>
+
+                <!-- data-bs-backdrop=static (pano de fundo estatico) impossibilita sair do popup apenas clicando fora dela -->
+                <div id="modal2" class="modal" data-bs-backdrop="static">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4>Header da modal2</h4>
+
+                                <!-- Botao superior de close discreto -->
+                                <!-- Adicionado data-bs-dismiss=modal (desfazer/liberar modal)  -->
+                                <button data-bs-dismiss="modal" type="button" class="btn-close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et rem aliquam eveniet vitae consequuntur voluptatum quas explicabo, mollitia fugit, iusto porro dolores aspernatur obcaecati impedit harum laudantium ipsum dolorem deleniti.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <h5>Rodape da modal</h5>
+                                <!-- Adicionado data-bs-dismiss=modal (desfazer/liberar modal)  -->
+                                <button class="btn btn-danger" data-bs-dismiss="modal" type="button">Cancelar</button>
+                                <a href="#" class="btn btn-success" data-bs-dismiss="modal">Confirmar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="lib/cdn.jsdelivr.net_npm_bootstrap@5.3.0_dist_js_bootstrap.bundle.min.js"></script>
+    <script>
+        // mais uma forma de abrir a modal
+                        // DOMContentLoaded = quando todo o DOM for carregado execute a funcao
+        document.addEventListener("DOMContentLoaded", function(){
+            // new bootstrap.Modal("#modal2") = Surgir Item(Modal do Bootstrap)(id do item)
+            const modalExemplo = new bootstrap.Modal("#modal2")
+            // setTimeout definir tempo em que sera mostrado
+            setTimeout(function () {
+                // Mostrar na tela
+                modalExemplo.show()
+
+                // tempo em mili-segundos
+            }, 120000)
+        })
+    </script>
 </body>
 </html>

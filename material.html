@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/cdn.jsdelivr.net_npm_bootstrap@5.3.0_dist_css_bootstrap.min.css">
+    <style>
+        /* 
+            Escurecendo a imagem de fundo no card 3
+        */
+        .card-img-overlay{
+            background-color: rgba(0, 0, 0, 0.521);
+        }
+    </style>
+</head>
+<body>
+    <!-- Cards -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="display-3">Cards</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <!-- O card comeca aqui -->
+
+                <!-- O card é dividido em Cabeçalho, Corpo e Rodapé-->
+                <div class="card">
+
+                    <!-- cabeçalho -->
+                    <div class="card-header"> 
+                        <p>cabecalho do header</p>
+                    </div>
+
+                    <!-- As imagens ficam dentro do card, mas fora do Corpo -->
+                    <img src="https://placeholder.com/100x100" alt="">
+
+                    <!-- Corpo -->
+                    <div class="card-body">
+                        <h4 class="title-card">Titulo do Card</h4>
+                        <h5 class="card-subtitle">Subtitulo do Card</h5>
+                        <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos non quidem inventore rem fugiat totam et minus recusandae tempore dignissimos sed atque, soluta nam quos reprehenderit similique nobis officia consequatur!</p>
+                        <a href="#" class="btn btn-dark">Botao link</a>
+                    </div>
+
+                    <!-- Rodapé -->
+                    <div class="card-footer">
+                        <h6>Fim do card</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <!-- text-bg-dark é usado para deixar o card no modo escuro -->
+                <div class="card text-bg-dark">
+                    <div class="card-header">
+                        <p>Segundo Card</p>
+                    </div>
+
+                    <img src="https://cdn.pixabay.com/photo/2023/06/04/05/27/motorcycle-8038868_1280.jpg" alt="">
+
+                    <div class="card-body">
+                        <h4 class="card-title">Titulo do card 2</h4>
+                        <h5 class="card-subtitle">Subtitulo do card 2</h5>
+                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel porro dicta, soluta, possimus harum doloremque consequatur, quae fugiat accusamus laudantium culpa beatae a accusantium recusandae explicabo officiis voluptatem totam. Veniam.</p>
+                        <a href="#" class="btn btn-success">Botao sucesso</a>
+                    </div>
+                    <div class="card-footer">
+                        <h6>fim do card 2</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card text-bg-dark">
+                    <!-- Para deixar o texto mais legivel sobre a imagem, podemos escurece-la usando css na classe card-img-overlay -->
+                    <img src="https://cdn.pixabay.com/photo/2023/05/07/17/25/snail-7976786_1280.jpg" alt="">
+                    
+                    <!-- card-img-overlay é usado para colocar o corpo do card por cima da imagem (para isso nao pode haver cabeçalho no card)-->
+                    <div class="card-img-overlay">
+                        <h3 class="card-title">Titulo Card 3</h3>
+                        <h4 class="card-subtitle">Subtitulo do Card 3</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis cumque explicabo et libero ea excepturi saepe in ex placeat, numquam totam optio provident. Sint expedita atque eos iure illo perferendis.</p>
+                        <a href="#" class="btn btn-danger">Botao Card 3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carrossel -->
+    <div class="container">
+        <h2 class="display-3">Carrossel</h2>
+        <div class="row">
+            <div class="col">
+                <!-- O carrossel possui seu proprio container e dentro dele possui itens(imagens), depois tem botoes, que servem para ver outras imagens -->
+
+                <!-- Carrossel comeca aqui -->
+                <div id="carrossel" class="carousel slide" data-bs-ride="carousel">
+
+                    <!-- Container do carrossel -->
+                    <div class="carousel-inner">
+
+                        <!-- item do carrossel(imagem) -->
+                        <!-- data-bs-interval="2000" é o intevalo para o slide da imagem selecionada em ms -->
+                        <div data-bs-interval="2000" class="carousel-item active">
+                            <img src="https://cdn.pixabay.com/photo/2022/08/21/05/48/insect-7400456_1280.jpg" alt="">
+                            
+                        </div>
+                        <div data-bs-interval="2000" class="carousel-item">
+                            <img src="https://cdn.pixabay.com/photo/2023/05/24/05/06/dog-8014047_1280.jpg" alt="">
+                        </div>
+                        <div data-bs-interval="2000" class="carousel-item">
+                            <img src="https://cdn.pixabay.com/photo/2023/05/06/22/11/dragonfly-7975259_1280.jpg" alt="">
+                        </div>
+                        <div data-bs-interval="2000" class="carousel-item">
+                            <img src="https://cdn.pixabay.com/photo/2023/05/22/11/22/superb-fairywren-8010454_1280.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- div de botoes para mover slides -->
+                    <div>
+
+                        <!-- Botao para voltar: tem um stilo "carousel-control-prev" um alvo(o id do carrossel) e uma direcao para slide(prev) -->
+                        <div>
+                            <button type="button" class="carousel-control-prev" data-bs-target="#carrossel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                        </div>
+
+                        <!-- Botao para voltar: tem um stilo"carousel-control-next" um alvo(o id do carrossel) e uma direcao para slide(next) -->
+                        <div>
+                            <button type="button" class="carousel-control-next" data-bs-target="#carrossel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- div para indicadores na parte de baixo da imagem -->
+                    <!-- carousel-indicators serve para estilizar os botoes como indicadores do carrossel -->
+                    <div class="carousel-indicators">
+
+                        <!-- data-bs-slide-to significa que quando clicado o botao mandara seguir para a imagem atribuida no alvo(data-bs-target) -->
+                        <button class="active" data-bs-target="#carrossel" data-bs-slide-to="0" type="button"></button>
+                        <button data-bs-target="#carrossel" data-bs-slide-to="1" type="button"></button>
+                        <button data-bs-target="#carrossel" data-bs-slide-to="2" type="button"></button>
+                        <button data-bs-target="#carrossel" data-bs-slide-to="3" type="button"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="lib/cdn.jsdelivr.net_npm_bootstrap@5.3.0_dist_js_bootstrap.bundle.min.js"></script>
+</body>
+</html>

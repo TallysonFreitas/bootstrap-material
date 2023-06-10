@@ -33,6 +33,7 @@
 
         section{
             height: 100vh;
+            padding-top: 70px;
         }
 
     </style>
@@ -348,12 +349,45 @@
                                     </div>
                                     <div class="modal-footer">
                                         <h5>Rodape da modal</h5>
-                                        
+
                                         <!-- Adicionado data-bs-dismiss=modal (desfazer/liberar modal)  -->
                                         <button class="btn btn-danger" data-bs-dismiss="modal" type="button">Cancelar</button>
                                         <a href="#" class="btn btn-success" data-bs-dismiss="modal">Confirmar</a>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Abas -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+
+                        <!-- Adicionando cabecalho abas (tabs) -- nav-tabs = define o tipo do menu. pode ser alterado para nav-pills-->
+                        <div class="nav nav-tabs">
+
+                            <!--Criando pagina para acada aba, determinando o tipo de alteracao= tab e definindo o alvo para cada botao target -->
+                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#aban1" type="button">123</button>
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#aban2" type="button">123</button>
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#aban3" type="button">123</button>
+                        </div>
+                        
+                        <!-- Criando conteudo de cada aba -->
+                        <div class="tab-content">
+
+                            <!-- Painel de cada aba -->
+                            <div class="tab-pane active" id="aban1">
+                                Tab 1
+                            </div>
+                            <div class="tab-pane" id="aban2">
+                                Tab 2
+                            </div>
+                            <div class="tab-pane" id="aban3">
+                                Tab 3
                             </div>
                         </div>
                     </div>
